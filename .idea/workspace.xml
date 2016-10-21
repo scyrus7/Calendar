@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="212d022f-58f6-492d-a7c0-a41ba641590e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Calendar.py" afterPath="$PROJECT_DIR$/Calendar.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Calendar.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,8 +31,8 @@
       <file leaf-file-name="Calendar.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Calendar.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31653887" vertical-offset="1428" max-vertical-offset="2737">
-              <caret line="101" column="36" selection-start-line="101" selection-start-column="36" selection-end-line="101" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.9309967" vertical-offset="1479" max-vertical-offset="3298">
+              <caret line="137" column="45" selection-start-line="137" selection-start-column="45" selection-end-line="137" selection-end-column="45" />
               <folding>
                 <element signature="e#21#44#0" expanded="true" />
               </folding>
@@ -526,12 +525,12 @@
       <created>1477075778623</created>
       <option name="number" value="Default" />
       <updated>1477075778623</updated>
-      <workItem from="1477075782247" duration="5447000" />
+      <workItem from="1477075782247" duration="8639000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5447000" />
+    <option name="totallyTimeSpent" value="8639000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2116" y="0" width="1178" height="1087" extended-state="0" />
@@ -597,8 +596,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Calendar.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31653887" vertical-offset="1428" max-vertical-offset="2737">
-          <caret line="101" column="36" selection-start-line="101" selection-start-column="36" selection-end-line="101" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.9309967" vertical-offset="1479" max-vertical-offset="3298">
+          <caret line="137" column="45" selection-start-line="137" selection-start-column="45" selection-end-line="137" selection-end-column="45" />
           <folding>
             <element signature="e#21#44#0" expanded="true" />
           </folding>

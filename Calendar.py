@@ -92,11 +92,44 @@ class Calendar:
         '</div>'
 
     # come up with number of weeks in a month
-    def weeksInMonth(self):
+    def weeksInMonth(self,month = None,year = None):
+        if(None == year):
+            year = datetime(datetime.now(),'Y')
+
+        if(None == month):
+            month = datetime(datetime.now(),'m')
+
+        daysInMonth = Calendar.daysInMonth(month, year)
+
+        numOfWeeks = (daysInMonth %7 == 0 and 0 or 1) + int(daysInMonth/7)
+        monthEndDay = datetime.strptime(year+'-'+month+'-1', 'N')
+        monthStartDay = datetime.strptime(year+'-'+month+'01')
+        if(monthEndDay == 7):
+            monthEndDay=0
+        else:
+            monthEndDay = ''
+
+        if(monthStartDay==7):
+          monthStartDay =0
+        else:
+         monthStartDay =''
+
+         if(monthEndDay < monthStartDay):
+             numOfWeeks+=1
+
+         return numOfWeeks
+
         return None
 
-    def daysInMonth(self):
-        return None
+    def daysInMonth(self, month, year):
+        if(None == year):
+            year = datetime(datetime.now(), 'Y')
+
+        if(None == month):
+            month = datetime(datetime.now(),'m')
+
+
+        return datetime.strptime(year+'-'+month+'-01')
 
     def createLabel(self):
         if(Calendar.sundayBegining):
