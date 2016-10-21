@@ -36,7 +36,7 @@ class Calendar:
 
             # context = '<div id="calendar">'
             #                               '<div class="box">'
-            #                               +createNavi()
+            #                               +setupNavi()
             #                               + '</div>'
             #                               + '<div class="box-content">'
             #                               + '<ul class="label">'+creatLabel()+'</ul>'
@@ -79,8 +79,17 @@ class Calendar:
 
 
     # create navigation for prev and next
-    def createNavi(self):
-        return None
+    def setupNavi(self):
+        monthNext = Calendar.currMonth == 12 and 1 or int(Calendar.currMonth) + 1
+        yearNext = Calendar.currYear == 12 and int(Calendar.currYear)+1 or Calendar.currYear
+
+        monthPre = Calendar.currMonth == 1 and 12 or int(Calendar.currMonth)-1
+        yearPre = Calendar.currYear == 1 and int(Calendar.currYear) -1 or Calendar.currYear
+        return 			'<div class="header">'
+        '<a class="prev" href="'+Calendar.navHref+'?month='+'%02d'%(monthPre)+'&year='+YearPre+'">Prev</a>'
+        '<span class="title">'+datetime.strptime(Calendar.currYear+'-'+Calendar.currMonth+'-1', 'Y m')+'</span>'
+        '<a class="next" href="'+Calendar.navHref+'?month='+"%02d"% monthNext+'&year='+yearNext+'">Next</a>'
+        '</div>'
 
     # come up with number of weeks in a month
     def weeksInMonth(self):
@@ -90,7 +99,19 @@ class Calendar:
         return None
 
     def createLabel(self):
-        return None
+        if(Calendar.sundayBegining):
+            temp1 = Calendar.LabelDays[0]
+            for i in range(1,len(Calendar.LabelDays) ):
+                temp2 = Calendar.LabelDays[i]
+                Calendar.LabelDays[i] = temp1
+                temp1 = temp2
+
+            Calendar.LabelDays[0] = temp1
+
+        context = ''
+        for (index, label) in enumerate(Calendar.LabelDays):
+            context+='<li class="'+(label==6 and 'end title'or 'start title')+' title">'+label+'</li>'
+        return context
 
     def setSunday(bool = True):
         Calendar.sundayBegining = bool
